@@ -119,48 +119,48 @@ export default function Colombo() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero */}
-      <div className="relative h-screen">
+      {/* Hero - Reduced from h-screen to h-96 */}
+      <div className="relative h-96">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920)' }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative h-full flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-light text-white mb-4 leading-tight">
             Discover Vibrant<br />Colombo
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-12 font-light">
+          <p className="text-lg md:text-xl text-white mb-8 font-light">
             Where tradition meets modernity in Sri Lanka's bustling capital.
           </p>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-4 px-12 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-lg text-base transition duration-300 transform hover:scale-105">
             Explore the City
           </button>
         </div>
       </div>
 
-      {/* Hotels */}
-      <section className="py-20 bg-white">
+      {/* Hotels - Reduced padding and card heights */}
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900">Luxury Hotels</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900">Luxury Hotels</h2>
           </div>
           <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {getVisibleHotels().map((hotel, index) => (
                 <div key={`${hotel.name}-${index}`} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                  <div className="h-64 bg-cover bg-center" style={{ backgroundImage: `url(${hotel.image})` }} />
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-semibold text-gray-900">{hotel.name}</h3>
+                  <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${hotel.image})` }} />
+                  <div className="p-4">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-lg font-semibold text-gray-900">{hotel.name}</h3>
                       <div className="text-right">
-                        <span className="text-2xl font-bold text-gray-900">{hotel.price}</span>
+                        <span className="text-xl font-bold text-gray-900">{hotel.price}</span>
                         <span className="text-gray-600 ml-1">/ {hotel.period}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="flex">{renderStars(hotel.rating)}</div>
-                      <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-6 rounded-lg transition duration-200">
+                      <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-4 rounded-lg transition duration-200 text-sm">
                         Book Now
                       </button>
                     </div>
@@ -169,28 +169,28 @@ export default function Colombo() {
               ))}
             </div>
             {/* Arrows */}
-            <button onClick={prevHotel} className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition">
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            <button onClick={prevHotel} className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition">
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
-            <button onClick={nextHotel} className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition">
-              <ChevronRight className="w-6 h-6 text-gray-600" />
+            <button onClick={nextHotel} className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition">
+              <ChevronRight className="w-5 h-5 text-gray-600" />
             </button>
           </div>
         </div>
       </section>
 
-      {/* Plan Your Day */}
-      <section className="py-20 bg-gray-50">
+      {/* Plan Your Day - Reduced padding and card heights */}
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900">Explore Colombo</h2>
-            <div className="flex justify-center mt-8">
-              <div className="bg-white rounded-lg p-2 shadow-lg flex space-x-2">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900">Explore Colombo</h2>
+            <div className="flex justify-center mt-6">
+              <div className="bg-white rounded-lg p-1 shadow-lg flex space-x-1">
                 {categories.map((category) => (
                   <button
                     key={category}
                     onClick={() => setActiveCategory(category)}
-                    className={`px-6 py-3 rounded-lg font-medium transition ${
+                    className={`px-4 py-2 rounded-lg font-medium transition text-sm ${
                       activeCategory === category ? 'bg-gray-900 text-white' : 'text-gray-600 hover:text-gray-900'
                     }`}
                   >
@@ -201,13 +201,13 @@ export default function Colombo() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {categoryData[activeCategory].map((place, index) => (
               <div key={index} className="bg-white shadow-lg rounded-2xl overflow-hidden group hover:shadow-2xl transition">
-                <div className="h-64 bg-cover bg-center" style={{ backgroundImage: `url(${place.image})` }} />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{place.name}</h3>
-                  <p className="text-gray-600">{place.description}</p>
+                <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${place.image})` }} />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{place.name}</h3>
+                  <p className="text-gray-600 text-sm">{place.description}</p>
                 </div>
               </div>
             ))}
@@ -215,12 +215,12 @@ export default function Colombo() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      {/* Footer - Reduced padding */}
+      <footer className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-light mb-4">Ready to Explore Colombo?</h3>
-          <p className="text-gray-300 mb-8">Experience the perfect blend of history, culture, and modern city life.</p>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-lg transition">
+          <h3 className="text-xl font-light mb-3">Ready to Explore Colombo?</h3>
+          <p className="text-gray-300 mb-6 text-sm">Experience the perfect blend of history, culture, and modern city life.</p>
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-6 rounded-lg transition">
             Start Your Journey
           </button>
         </div>

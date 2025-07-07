@@ -204,9 +204,9 @@ const DestinationsPage = () => {
                     <span>{destination.duration}</span>
                   </div>
                   <Link
-                    to={`/District/${destination.name.toLowerCase()}`}
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
-                  >
+  to={`/city/${destination.id}`}
+  className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+>
                     Explore
                   </Link>
                 </div>
