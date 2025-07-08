@@ -63,21 +63,33 @@ export default function CityPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
       <div className="relative h-96">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${data.heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-        <div className="relative h-full flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-3xl md:text-4xl font-light text-white mb-4 leading-tight">
-            {data.heroTitle}
-          </h1>
-          <p className="text-lg md:text-xl text-white mb-8 font-light">{data.heroSubtitle}</p>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-lg text-base transition duration-300 transform hover:scale-105">
-            Explore the City
-          </button>
-        </div>
-      </div>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ 
+      backgroundImage: `url(${data.heroImage})`,
+      width: '100%',
+      height: '100%',
+    }}
+  />
+  
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-40" />
+  
+  {/* Content */}
+  <div className="relative h-full flex flex-col justify-center items-center text-center px-4">
+    <h1 className="text-3xl md:text-4xl font-light text-white mb-4 leading-tight">
+      {data.heroTitle}
+    </h1>
+    <p className="text-lg md:text-xl text-white mb-8 font-light">
+      {data.heroSubtitle}
+    </p>
+    <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-lg text-base transition duration-300 transform hover:scale-105">
+      Explore the City
+    </button>
+  </div>
+</div>
+
 
       {/* Weather Section */}
       {weather && (

@@ -4,6 +4,8 @@ import DestinationsPage from './home/Destination/Destination';
 import Navbar from './home/Nav/nav';
 import CityPage from './home/District/city';
 import NewsFeed from './home/News/news';
+import ForexPage from './home/Exchnage';
+import WeatherPage from './home/Weather/weather';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         {/* Dynamic route for destinations */}
         <Route path="/destination/:id" element={<DestinationsPage />} />
         <Route path="/news" element={<NewsFeed />} />
+        <Route path="/exchange-rates" element={<ForexPage />} />
+        <Route path="/weather" element={<WeatherPage />} />
       </Routes>
       
     </Router>

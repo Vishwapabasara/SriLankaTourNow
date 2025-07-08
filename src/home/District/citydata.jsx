@@ -1,7 +1,7 @@
 const cityData = {
     colombo: {
       cityName: "Colombo",
-      heroImage: "https://your-hero-image.jpg",
+      heroImage: "/assets/Colombo.jpg",
       heroTitle: "Discover Vibrant Colombo",
       heroSubtitle: "Where tradition meets modernity.",
       footerDescription: "Experience the perfect blend of culture and city life.",
@@ -22,7 +22,7 @@ const cityData = {
           image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'
         },
         {
-          name: 'Galle Face Hotel',
+          name: 'Galle Face Hotel', 
           rating: 4,
           price: '$95',
           period: 'night',
