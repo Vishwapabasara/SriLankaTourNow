@@ -4,7 +4,7 @@ import axios from "axios";
 import { PlayCircle } from "lucide-react";
 
 const API_KEY = 'AIzaSyAVdk6G90AvCngeVCJmIHfBa4o7sa1bPfc';
-const MAX_RESULTS = 6;
+const MAX_RESULTS = 3;
 const SEARCH_QUERY = "Sri Lanka travel vlog";
 
 export default function SriLankaVideos() {
