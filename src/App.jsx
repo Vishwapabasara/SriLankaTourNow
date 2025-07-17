@@ -1,18 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SriLankaDeals from './home/home';
-import DestinationsPage from './home/Destination/Destination';
-import Navbar from './home/Nav/nav';
-import CityPage from './home/District/city';
-import NewsFeed from './home/News/news';
-import ForexPage from './home/Exchnage';
-import WeatherPage from './home/Weather/weather';
+import SriLankaTravelSite from './home/home';
+import DestinationsPage from './Destination/Destination';
+import Navbar from './Nav/nav';
+import CityPage from './District/city';
+import NewsFeed from './News/news';
+import ForexPage from './Exchnage';
+import WeatherPage from './Weather/weather';
+import Hotels from './home/Hotels/Hotels';
+import Footer from './Footer/footer';
+import TravelEssential from './traveles';
+import SriLankaVideos from './home/Youtbe/youtube';
+import AirlinesSection from './home/Airlines/airline';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<SriLankaDeals />} />
+        <Route path="/" element={<SriLankaTravelSite />} />
         
         {/* Dynamic route for cities */}
         <Route path="/city/:cityId" element={<CityPage />} />
@@ -22,7 +27,14 @@ function App() {
         <Route path="/news" element={<NewsFeed />} />
         <Route path="/exchange-rates" element={<ForexPage />} />
         <Route path="/weather" element={<WeatherPage />} />
+        <Route path="/hotels" element={<Hotels />} />
+        <Route path="/travelesenetials" element={<TravelEssential/>}/>
+        <Route path="/youtube" element={<SriLankaVideos/>}/>
+        <Route path="/airline" element={<AirlinesSection/>}/>
+
+ 
       </Routes>
+      <Footer/>
       
     </Router>
   );
