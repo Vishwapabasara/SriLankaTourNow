@@ -115,13 +115,8 @@ export default function SriLankaTravelSite() {
 
             
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
-                Visit SriLankan Airlines
-              </button>
-            </div>
+            
+            
           </div>
 
           {/* Right Column */}
@@ -174,9 +169,10 @@ export default function SriLankaTravelSite() {
       </div>
       <Hotels />
       {/* FAQ still inside left column */}
-      <FAQPage />
+      
       <SriLankaVideos/>
       <AirlinesSection/>
+      <FAQPage />
       
     </div>
   );
