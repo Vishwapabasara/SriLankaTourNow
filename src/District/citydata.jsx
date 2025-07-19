@@ -19,7 +19,7 @@ const cityData = {
         city: "Colombo",
         name: "Shangri-La Colombo",
         type: "Luxury",
-        link: "/Users/vishwaravidu/Travel/public/assets/hotels/shangrilla.jpg",
+        link: "https://www.shangri-la.com/colombo/shangrila/",
         image: "/assets/hotels/shangrilla.jpg",
         description: "5-star hotel with stunning views and top amenities."
       },
